@@ -3,6 +3,8 @@ nodeJs 学习笔记
 
 
 ## node安装配置
+[内容地址](https://github.com/Dramers/nodejs-note/blob/master/node安装配置.md)
+
 
 ## 初始化一个模块
 
