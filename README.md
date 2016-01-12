@@ -5,10 +5,8 @@ nodeJs 学习笔记
 ## node安装配置
 [内容地址](https://github.com/Dramers/nodejs-note/blob/master/node安装配置.md)
 
-
-## 初始化一个模块
-
-## 一个简单的小例子
+## 功能记录
+[内容地址](https://github.com/Dramers/nodejs-note/blob/master/node功能记录.md)
 
 ## HTTP服务
 
