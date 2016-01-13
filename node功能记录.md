@@ -1,7 +1,10 @@
 ##自定义事件驱动
 Node.js 使用事件驱动模型，当web server接收到请求，就把它关闭然后进行处理，然后去服务下一个web请求。
+
 当这个请求完成，它被放回处理队列，当到达队列开头，这个结果被返回给用户。
+
 这个模型非常高效可扩展性非常强，因为webserver一直接受请求而不等待任何读写操作。（这也被称之为非阻塞式IO或者事件驱动IO）
+
 在事件驱动模型中，会生成一个主循环来监听事件，当检测到事件时触发回调函数。
 
 	// 引入 events 模块
@@ -30,6 +33,38 @@ Node.js 使用事件驱动模型，当web server接收到请求，就把它关�
 	eventEmitter.emit('connection');
 	
 	console.log("程序执行完毕")；	
+
+####实例方法
+
+* addListener(event, listener) 为指定事件添加一个监听器到监听器数组的尾部。
+* removeListener(event, listener) 移除指定事件的某个监听器，监听器 必须是该事件已经注册过的监听器。
+* once(event, listener) 为指定事件注册一个单次监听器，即 监听器最多只会触发一次，触发后立刻解除该监听器。
+* removeAllListeners([event]) 移除所有事件的所有监听器， 如果指定事件，则移除指定事件的所有监听器。
+* setMaxListeners(n) 默认情况下， EventEmitters 如果你添加的监听器超过 10 个就会输出警告信息。 setMaxListeners 函数用于提高监听器的默认限制的数量。
+* listeners(event) 返回指定事件的监听器数组。
+
+####类方法
+* listenerCount(emitter, event) 返回指定事件的监听器数量。
+
+##继承EventEmitter用法
+大多数时候我们不会直接使用 EventEmitter，而是在对象中继承它。包括 fs、net、 http 在内的，只要是支持事件响应的核心模块都是 EventEmitter 的子类。
+
+为什么要这样做呢？原因有两点：
+
+首先，具有某个实体功能的对象实现事件符合语义， 事件的监听和发射应该是一个对象的方法。
+
+其次 JavaScript 的对象机制是基于原型的，支持 部分多重继承，继承 EventEmitter 不会打乱对象原有的继承关系。
+
+##error事件
+EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义，我们在遇到 异常的时候通常会触发 error 事件。
+
+当 error 被触发时，EventEmitter 规定如果没有响 应的监听器，Node.js 会把它当作异常，退出程序并输出错误信息。
+
+我们一般要为会触发 error 事件的对象设置监听器，避免遇到错误后整个程序崩溃。例如：
+
+	var events = require('events'); 
+	var emitter = new events.EventEmitter(); 
+	emitter.emit('error'); 
 
 ##读取文件
 	// 引入文件模块
