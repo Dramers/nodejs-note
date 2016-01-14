@@ -90,6 +90,9 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 	
 ###buffer to string
 	buf.toString([encoding][, start][, end])
+	
+###buffer to JSON
+	buf.toJSON()
 
 ##读取文件
 	// 引入文件模块
