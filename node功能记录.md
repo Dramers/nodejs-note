@@ -93,6 +93,9 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 	
 ###buffer to JSON
 	buf.toJSON()
+	
+###合并两个buffer
+	Buffer.concat(list[, totalLength])
 
 ##读取文件
 	// 引入文件模块
