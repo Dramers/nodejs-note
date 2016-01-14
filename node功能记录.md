@@ -102,6 +102,9 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 	
 比较asc码，小于0为升序，等于0为相等，大于0为降序。
 
+###拷贝buffer
+	buf.copy(targetBuffer[, targetStart][, sourceStart][, sourceEnd])
+
 ##读取文件
 	// 引入文件模块
 	var fs = require('fs');
