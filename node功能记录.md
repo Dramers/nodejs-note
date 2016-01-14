@@ -68,6 +68,17 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 
 ##buffer操作
 
+###创建buffer
+	// 创建10个字节的空buffer
+	var buf = new Buffer(10);
+	
+	// 通过数组创建buffer
+	var buf = new Buffer([10, 20, 30, 40, 50]);
+	
+	// 通过字符串创建buffer  
+	// utf-8 是默认的编码方式，此外它同样支持以下编码："ascii", "utf8", "utf16le", "ucs2", "base64" 和 "hex"。
+	var buf = new Buffer("www.runoob.com", "utf-8");
+
 ##读取文件
 	// 引入文件模块
 	var fs = require('fs');
