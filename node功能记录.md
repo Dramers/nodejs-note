@@ -78,6 +78,15 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 	// 通过字符串创建buffer  
 	// utf-8 是默认的编码方式，此外它同样支持以下编码："ascii", "utf8", "utf16le", "ucs2", "base64" 和 "hex"。
 	var buf = new Buffer("www.runoob.com", "utf-8");
+	
+###字符串写入buffer
+	buf.write(string[, offset][, length][, encoding])
+	
+	buf = new Buffer(256);
+	len = buf.write("www.runoob.com");
+	// 如果buffer空间不足 则len为部分长度
+	
+	console.log("写入字节数 : "+  len);
 
 ##读取文件
 	// 引入文件模块
