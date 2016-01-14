@@ -96,6 +96,11 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 	
 ###合并两个buffer
 	Buffer.concat(list[, totalLength])
+	
+###比较两个buffer
+	buf.compare(otherBuffer);
+	
+比较asc码，小于0为升序，等于0为相等，大于0为降序。
 
 ##读取文件
 	// 引入文件模块
