@@ -66,6 +66,8 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 	var emitter = new events.EventEmitter(); 
 	emitter.emit('error'); 
 
+##buffer操作
+
 ##读取文件
 	// 引入文件模块
 	var fs = require('fs');
