@@ -87,6 +87,9 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 	// 如果buffer空间不足 则len为部分长度
 	
 	console.log("写入字节数 : "+  len);
+	
+###buffer to string
+	buf.toString([encoding][, start][, end])
 
 ##读取文件
 	// 引入文件模块
