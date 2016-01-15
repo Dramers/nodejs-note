@@ -9,3 +9,11 @@ nodejs中一个js文件就是一个模块，如hello.js就是一个模块。
     var hello = require('./hello');
   
 引入模块用require方法，参数传模块js文件的地址，不用带后缀，./是当前文件的目录。
+
+##定义外部方法（模块公开接口）
+
+###将模块内某个方法属性公开接口
+
+    exports.world = function() {
+        console.log('Hello World');
+    }
