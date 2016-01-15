@@ -190,6 +190,33 @@ stream可监听的事件
 	
 	console.log("程序执行完毕");
 
+###链式流
+感觉就是管道流中，中间对流再次进行处理的一部分管道，位于管道流中间
+
+* **压缩文件**
+
+		var fs = require("fs");
+		var zlib = require('zlib');
+		
+		// 压缩 input.txt 文件为 input.txt.gz
+		fs.createReadStream('input.txt')
+		  .pipe(zlib.createGzip())
+		  .pipe(fs.createWriteStream('input.txt.gz'));
+		  
+		console.log("文件压缩完成。");
+* **解压文件**
+
+		var fs = require("fs");
+		var zlib = require('zlib');
+		
+		// 解压 input.txt.gz 文件为 input.txt
+		fs.createReadStream('input.txt.gz')
+		  .pipe(zlib.createGunzip())
+		  .pipe(fs.createWriteStream('input.txt'));
+		  
+		console.log("文件解压完成。");
+
+
 ##读取文件
 	// 引入文件模块
 	var fs = require('fs');
