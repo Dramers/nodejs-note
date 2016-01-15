@@ -17,3 +17,36 @@ nodejs中一个js文件就是一个模块，如hello.js就是一个模块。
     exports.world = function() {
         console.log('Hello World');
     }
+
+这样就可以在外部以下面这种方式调用模块内方法：
+	
+	// 会输出 “Hello World”
+	hello.world()
+	
+###将模块整个对象公开接口
+
+	module.exports = function() {
+  		// ...
+	}
+	
+下面这个例子 Hello对象公开了出去，在外部直接使用对象：
+	
+	//hello.js 
+	function Hello() { 
+		var name; 
+		this.setName = function(thyName) { 
+			name = thyName; 
+		}; 
+		this.sayHello = function() { 
+			console.log('Hello ' + name); 
+		}; 
+	}; 
+	module.exports = Hello;
+	
+在外部使用方式为：
+	
+	//main.js 
+	var Hello = require('./hello'); 
+	hello = new Hello(); 
+	hello.setName('BYVoid'); 
+	hello.sayHello(); 
