@@ -111,6 +111,22 @@ EventEmitter 定义了一个特殊的事件 error，它包含了错误的语义�
 ###获取长度
 	buf.length;
 
+##stream操作
+stream的种类
+
+* **Readable** 可读操作。
+* **Writable** 可写操作。
+* **Duplex** 可读可写操作。
+* **Transform** 操作被写入数据，然后读出结果。
+
+stream可监听的事件
+
+* **data** 当有数据可读时触发。
+* **end** 没有更多的数据可读时触发。
+* **error** 在接收和写入过程中发生错误时触发。
+* **finish** 所有数据已被写入到底层系统时触发。
+
+
 ##读取文件
 	// 引入文件模块
 	var fs = require('fs');
