@@ -8,9 +8,17 @@ nodeJs 学习笔记
 ## 功能记录
 [内容地址](https://github.com/Dramers/nodejs-note/blob/master/node功能记录.md)
 
+##模块
+[内容地址](https://github.com/Dramers/nodejs-note/blob/master/node模块.md)
+
 ## HTTP服务
+[内容地址](https://github.com/Dramers/nodejs-note/blob/master/HTTP服务.md)
 
 ## Socket服务
+[内容地址](https://github.com/Dramers/nodejs-note/blob/master/Scoket服务.md)
+
+##中间件
+[内容地址](https://github.com/Dramers/nodejs-note/blob/master/中间件.md)
 
 ## 多核处理
 
