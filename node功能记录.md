@@ -263,4 +263,23 @@ stream可监听的事件
 
 * __filename 表示当前正在执行的脚本的文件名。它将输出文件所在位置的绝对路径
 * __dirname 表示当前执行脚本所在的目录。
-* 
+
+##常用工具
+
+###util.inherits
+util.inherits(constructor, superConstructor)是一个实现对象间原型继承 的函数。
+
+###util.inspect
+util.inspect(object,[showHidden],[depth],[colors])是一个将任意对象转换 为字符串的方法，通常用于调试和错误输出。它至少接受一个参数 object，即要转换的对象。
+
+###util.isArray(object)
+如果给定的参数 "object" 是一个数组返回true，否则返回false。
+
+###util.isRegExp(object)
+如果给定的参数 "object" 是一个正则表达式返回true，否则返回false。
+
+###util.isDate(object)
+如果给定的参数 "object" 是一个日期返回true，否则返回false。
+
+###util.isError(object)
+如果给定的参数 "object" 是一个错误对象返回true，否则返回false。
