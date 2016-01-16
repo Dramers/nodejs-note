@@ -236,13 +236,31 @@ stream可监听的事件
 		console.log(data.toString);
 	});
 
-## 延时执行
+## 定时器
+
+定时执行 **setTimeout(cb, ms)**
+
 	// 延迟一秒 执行方法 打印 something
 	setTimeout( funcion () {
 		console.log("something")
 	}, 1000);
 
-## 初始化一个模块(引入模块)
-	var module = require("os");
+取消定时执行 **clearTimeout( t )**
 
-## 一个简单的小例子
+	function printHello(){
+   		console.log( "Hello, World!");
+	}
+	// 两秒后执行以上函数
+	var t = setTimeout(printHello, 2000);
+
+	// 清除定时器
+	clearTimeout(t);
+	
+* setInterval(cb, ms) 全局函数在指定的毫秒(ms)数后执行指定函数(cb)。返
+回一个代表定时器的句柄值。可以使用 clearInterval(t) 函数来清除定时器。setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。
+
+##全局对象
+
+* __filename 表示当前正在执行的脚本的文件名。它将输出文件所在位置的绝对路径
+* __dirname 表示当前执行脚本所在的目录。
+* 
