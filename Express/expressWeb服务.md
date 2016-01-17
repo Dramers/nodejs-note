@@ -90,3 +90,19 @@ Express 提供了内置的中间件 express.static 来设置静态文件如：�
 	
 修改代码
 [expressDemo3](./express_demo3.js)
+
+##获取请求参数
+	app.post('/process_post', urlencodedParser, function (req, res) {
+	
+	   // 输出 JSON 格式
+	   response = {
+	       first_name:req.body.first_name,
+	       last_name:req.body.last_name
+	   };
+	   console.log(response);
+	   res.end(JSON.stringify(response));
+	})
+	
+##文件上传
+修改代码
+[expressUploadDemo4](./express_demo4.js)
