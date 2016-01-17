@@ -80,3 +80,13 @@ res.type | 设置Content-Type的MIME类型
 接下来我们扩展 Hello World，添加一些功能来处理更多类型的 HTTP 请求。
 
 [expressDemo2](./express_demo2.js)
+
+##静态文件
+
+Express 提供了内置的中间件 express.static 来设置静态文件如：图片， CSS, JavaScript 等。
+你可以使用 express.static 中间件来设置静态文件路径。例如，如果你将图片， CSS, JavaScript 文件放在 public 目录下，你可以这么写：
+
+	app.use(express.static('public'));
+	
+修改代码
+[expressDemo3](./express_demo3.js)
