@@ -106,3 +106,17 @@ Express 提供了内置的中间件 express.static 来设置静态文件如：�
 ##文件上传
 修改代码
 [expressUploadDemo4](./express_demo4.js)
+
+##cookie管理
+	// express_cookie.js 文件
+	var express      = require('express')
+	var cookieParser = require('cookie-parser')
+	
+	var app = express()
+	app.use(cookieParser())
+	
+	app.get('/', function(req, res) {
+	  console.log("Cookies: ", req.cookies)
+	})
+	
+	app.listen(8081)
