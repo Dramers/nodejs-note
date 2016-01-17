@@ -70,3 +70,13 @@ res.sendFile(path[, option][, fn]) | 传送指定路径的文件 -会自动根�
 res.set |  设置HTTP头，传入object可以一次设置多个头
 res.status | 设置HTTP状态码
 res.type | 设置Content-Type的MIME类型
+
+## 路由
+
+我们已经了解了 HTTP 请求的基本应用，而路由决定了由谁(指定脚本)去响应客户端请求。
+
+在HTTP请求中，我们可以通过路由提取出请求的URL以及GET/POST参数。
+
+接下来我们扩展 Hello World，添加一些功能来处理更多类型的 HTTP 请求。
+
+[expressDemo2](./express_demo2.js)
